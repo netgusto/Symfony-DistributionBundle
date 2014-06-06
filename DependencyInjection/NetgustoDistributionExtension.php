@@ -21,6 +21,13 @@ class NetgustoDistributionExtension extends Extension
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
+        
+        if(array_key_exists('assets_forwarding', $config)) {
+            $assets_forwarding = $config['assets_forwarding'];
+        } else {
+            $assets_forwarding = array();
+        }
+        
         $container->setParameter('netgusto_distribution.assets_forwarding', $config['assets_forwarding']);
     }
 }
