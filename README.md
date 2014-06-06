@@ -35,7 +35,7 @@ In composer.json
 
 In app/AppKernel.php
 
-```
+```php
 $bundles = array(
     // ...
     new Netgusto\DistributionBundle\NetgustoDistributionBundle(),
