@@ -12,3 +12,21 @@ netgusto_distribution:
             - some/package
             - some/otherpackage
 ```
+
+```json
+/* composer.json */
+{
+    // [...]
+    "scripts": {
+        "post-install-cmd": [
+            // [...]
+            "Netgusto\\DistributionBundle\\Composer\\ScriptHandler::forwardAssetsToWebDir"
+        ],
+        "post-update-cmd": [
+            // [...]
+            "Netgusto\\DistributionBundle\\Composer\\ScriptHandler::forwardAssetsToWebDir"
+        ]
+    },
+    // [...]
+}
+```
