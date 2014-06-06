@@ -1,0 +1,28 @@
+{
+    "name": "netgusto/distribution-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 Project Distribution helper Bundle",
+    "keywords": ["symfony", "distribution"],
+    "homepage": "https://github.com/netgusto/Symfony-DistributionBundle",
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "Net Gusto",
+          "email": "contact@netgusto.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.4"
+    },
+    "require-dev": {
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-0": { "Netgusto\\DistributionBundle": "" }
+    },
+    "target-dir": "Netgusto/DistributionBundle",
+    "extra": {
+    }
+}
