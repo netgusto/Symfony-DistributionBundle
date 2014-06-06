@@ -28,6 +28,6 @@ class NetgustoDistributionExtension extends Extension
             $assets_forwarding = array();
         }
         
-        $container->setParameter('netgusto_distribution.assets_forwarding', $config['assets_forwarding']);
+        $container->setParameter('netgusto_distribution.assets_forwarding', $assets_forwarding);
     }
 }
