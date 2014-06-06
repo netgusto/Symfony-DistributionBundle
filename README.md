@@ -3,8 +3,8 @@ Symfony-DistributionBundle
 
 ## Forwarding assets packages to web dir
 
+In app/config.yaml
 ```yaml
-# app/config.yaml
 netgusto_distribution:
     assets_forwarding:
         dest_dir: ~
@@ -13,20 +13,22 @@ netgusto_distribution:
             - some/otherpackage
 ```
 
+In composer.json
 ```json
-/* composer.json */
 {
-    // [...]
+    '...',
     "scripts": {
         "post-install-cmd": [
-            // [...]
+            '...',
             "Netgusto\\DistributionBundle\\Composer\\ScriptHandler::forwardAssetsToWebDir"
         ],
         "post-update-cmd": [
-            // [...]
+            '...',
             "Netgusto\\DistributionBundle\\Composer\\ScriptHandler::forwardAssetsToWebDir"
         ]
     },
-    // [...]
+    '...',
 }
 ```
+
+Packages will be forwarded to `web/vendor` at `composer install`, and at every `composer update`.
